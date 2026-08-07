@@ -1,65 +1,23 @@
-GoodDock 사용 허가 조건
-GoodDock License Terms
-
+GoodDock
 Copyright (c) 2026 Seoyul Yoon. All rights reserved.
-저작권자가 모든 권리를 보유합니다.
 
-────────────────────────────────────────────────────────────
+GoodDock is free to use, but it is not open source.
 
-한국어
+You may:
+  - Install and use GoodDock on your own devices, for personal or
+    commercial purposes.
 
-GoodDock은 무료로 배포되지만 오픈소스가 아닙니다. 저작권자는 아래 범위의
-사용만 무상으로 허락하며, 그 밖의 모든 권리를 보유합니다.
+You may not:
+  - Modify, decompile, disassemble, or reverse engineer the software,
+    or create derivative works from it.
+  - Redistribute or host copies of it. Link to the official download
+    page instead.
+  - Sell it, or include it in a paid product or service.
+  - Sublicense any of the rights granted above.
 
-허용되는 것
-  1. 개인적, 상업적 목적을 불문하고 이 소프트웨어를 내려받아 자신의 기기에서
-     실행하고 사용하는 것.
+All other rights are reserved by the copyright holder. For any use beyond
+this scope, contact the copyright holder for written permission.
 
-금지되는 것
-  1. 소프트웨어를 역컴파일, 역어셈블, 리버스 엔지니어링하거나, 이를 수정하여
-     2차적 저작물을 만드는 것.
-  2. 소프트웨어의 원본 또는 수정본을 어떤 형태로든 재배포, 공유, 게시,
-     전송하는 것. 내려받기 링크는 공식 배포처를 안내해 주시기 바랍니다.
-  3. 소프트웨어를 판매하거나, 유상 제품 및 서비스에 포함하거나, 그 밖의
-     방법으로 상업적으로 이용하여 이익을 얻는 것.
-  4. 이 조건에 따른 권리를 제3자에게 재허락(sublicense)하는 것.
-
-수정, 재배포, 상업적 이용에 관한 권리는 저작권자에게만 있습니다.
-위 금지 사항에 해당하는 이용을 원하시면 저작권자에게 별도로 문의하여
-서면 허락을 받아야 합니다.
-
-보증의 부인
-이 소프트웨어는 어떠한 보증도 없이 "있는 그대로" 제공됩니다. 저작권자는
-이 소프트웨어의 사용으로 발생하는 어떠한 손해에 대해서도 책임지지 않습니다.
-
-────────────────────────────────────────────────────────────
-
-English
-
-GoodDock is distributed free of charge, but it is NOT open source. The
-copyright holder grants a free license limited to the scope described below
-and reserves all other rights.
-
-You MAY
-  1. Download, run, and use this software on your own devices, whether for
-     personal or commercial purposes.
-
-You MAY NOT
-  1. Decompile, disassemble, or reverse engineer the software, or modify it
-     to create derivative works.
-  2. Redistribute, share, publish, or transmit the software or any modified
-     version of it, in any form. Please link to the official download page
-     instead of hosting your own copy.
-  3. Sell the software, bundle it into a paid product or service, or
-     otherwise exploit it commercially for gain.
-  4. Sublicense any rights granted under these terms to a third party.
-
-All rights to modify, redistribute, and commercially exploit this software
-are reserved exclusively to the copyright holder. For any use falling under
-the prohibitions above, you must obtain prior written permission from the
-copyright holder.
-
-DISCLAIMER
-THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
-DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
