@@ -9,7 +9,7 @@ A menu bar app that keeps the macOS Dock on the display you choose.</p>
 
 <p align="center">
   <a href="https://github.com/Seo-yul/GoodDock/releases/latest"><b>⬇︎ Download</b></a> ·
-  <a href="http://devops.ai.kr/GoodDock/">Website</a> ·
+  <a href="https://devops.ai.kr/GoodDock/">Website</a> ·
   <a href="README.ko.md">한국어</a>
 </p>
 
@@ -65,15 +65,15 @@ Then click the dog in the menu bar and pick the display where the Dock should st
 Quit GoodDock and move `/Applications/GoodDock.app` to the Trash. To remove its settings as well:
 
 ```bash
-defaults delete local.gooddock
-tccutil reset Accessibility local.gooddock
+defaults delete kr.ai.devops.gooddock
+tccutil reset Accessibility kr.ai.devops.gooddock
 ```
 
 ## Good to know
 
 - On displays that are not pinned, pressing the pointer into the very bottom 2 pixels is slightly restricted. That is the cost of blocking the Dock, and it does not affect normal clicking.
 - Quitting the app restores everything instantly. It never changes your system settings.
-- The only value it stores is the UUID of your pinned display, in `~/Library/Preferences/local.gooddock.plist`.
+- The only value it stores is the UUID of your pinned display, in `~/Library/Preferences/kr.ai.devops.gooddock.plist`.
 - It makes no network connections.
 
 ## About the name

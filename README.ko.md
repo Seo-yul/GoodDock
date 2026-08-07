@@ -9,7 +9,7 @@ macOS Dock을 원하는 모니터에 얌전히 앉혀두는 메뉴 막대 앱</p
 
 <p align="center">
   <a href="https://github.com/Seo-yul/GoodDock/releases/latest"><b>⬇︎ 내려받기</b></a> ·
-  <a href="http://devops.ai.kr/GoodDock/">소개 페이지</a> ·
+  <a href="https://devops.ai.kr/GoodDock/">소개 페이지</a> ·
   <a href="README.md">English</a>
 </p>
 
@@ -65,15 +65,15 @@ xattr -dr com.apple.quarantine /Applications/GoodDock.app
 GoodDock을 종료하고 `/Applications/GoodDock.app`을 휴지통에 넣으면 됩니다. 설정까지 지우시려면 아래를 실행하세요.
 
 ```bash
-defaults delete local.gooddock
-tccutil reset Accessibility local.gooddock
+defaults delete kr.ai.devops.gooddock
+tccutil reset Accessibility kr.ai.devops.gooddock
 ```
 
 ## 알아둘 점
 
 - 고정하지 않은 모니터에서는 화면 맨 아래 2픽셀에 포인터를 밀어붙이는 동작이 살짝 제한됩니다. Dock을 막는 원리상 필요한 비용이고 일반적인 클릭에는 영향이 없습니다.
 - 앱을 종료하면 모든 동작이 즉시 원래대로 돌아갑니다. 시스템 설정을 건드리지 않습니다.
-- 저장하는 값은 고정한 화면의 UUID 하나뿐이고 `~/Library/Preferences/local.gooddock.plist`에 들어갑니다.
+- 저장하는 값은 고정한 화면의 UUID 하나뿐이고 `~/Library/Preferences/kr.ai.devops.gooddock.plist`에 들어갑니다.
 - 네트워크 통신은 전혀 하지 않습니다.
 
 ## 이름에 대하여
