@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodDock — Dock을 원하는 모니터에 고정하세요</title>
-<meta name="description" content="멀티 모니터에서 떠돌아다니는 macOS Dock을 지정한 화면에 고정하는 무료 메뉴 막대 앱.">
+<title>GoodDock — Keep the macOS Dock on the display you choose</title>
+<meta name="description" content="A free menu bar app that stops the macOS Dock from wandering between monitors.">
 <link rel="icon" type="image/png" href="assets/icon-source.png">
+<link rel="alternate" hreflang="en" href="http://devops.ai.kr/GoodDock/">
+<link rel="alternate" hreflang="ko" href="http://devops.ai.kr/GoodDock/ko/">
 <meta property="og:title" content="GoodDock">
-<meta property="og:description" content="멀티 모니터에서 떠돌아다니는 macOS Dock을 지정한 화면에 고정합니다.">
+<meta property="og:description" content="Keep the macOS Dock on the display you choose.">
 <meta property="og:image" content="assets/logo.png">
 <meta property="og:type" content="website">
 <style>
@@ -45,14 +47,19 @@
   .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
   a { color: var(--accent); }
 
-  /* Hero */
+  .lang {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 14px;
+    color: var(--fg-muted);
+  }
+  .lang a { text-decoration: none; }
+  .lang .on { color: var(--fg); font-weight: 600; }
+
   header { text-align: center; padding: 72px 0 56px; }
   header img { width: 240px; height: 240px; }
-  h1 {
-    margin: 20px 0 6px;
-    font-size: 44px;
-    letter-spacing: -0.02em;
-  }
+  h1 { margin: 20px 0 6px; font-size: 44px; letter-spacing: -0.02em; }
   .tagline { margin: 0; color: var(--fg-muted); font-size: 18px; }
   .sub { margin: 14px auto 0; max-width: 560px; color: var(--fg-muted); }
 
@@ -67,14 +74,9 @@
     text-decoration: none;
     border: 1px solid transparent;
   }
-  .btn.ghost {
-    background: transparent;
-    color: var(--fg);
-    border-color: var(--line);
-  }
+  .btn.ghost { background: transparent; color: var(--fg); border-color: var(--line); }
   .req { margin-top: 12px; font-size: 14px; color: var(--fg-muted); }
 
-  /* Sections */
   section { padding: 44px 0; border-top: 1px solid var(--line); }
   h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 14px; }
   p { margin: 0 0 16px; }
@@ -120,7 +122,7 @@
     font-size: 14px;
   }
   @media (max-width: 520px) {
-    header { padding: 48px 0 40px; }
+    header { padding: 56px 0 40px; }
     header img { width: 180px; height: 180px; }
     h1 { font-size: 34px; }
   }
@@ -128,115 +130,137 @@
 </head>
 <body>
 
+<nav class="lang"><span class="on">English</span> · <a href="ko/">한국어</a></nav>
+
 <header class="wrap">
-  <img src="assets/logo.png" alt="GoodDock 로고. 강아지가 Dock 위에 앉아 있다.">
+  <img src="assets/logo.png" alt="GoodDock logo: a puppy sitting on a macOS Dock.">
   <h1>GoodDock</h1>
-  <p class="tagline">앉아. 기다려. 착하지.</p>
-  <p class="sub">멀티 모니터에서 이리저리 떠돌아다니는 macOS Dock을,
-     원하는 화면 하나에 얌전히 앉혀둡니다.</p>
+  <p class="tagline">Sit. Stay. Good boy.</p>
+  <p class="sub">Your Dock wanders between monitors. GoodDock teaches it to stay
+     on the one display you choose.</p>
   <div class="cta">
-    <a class="btn" href="https://github.com/Seo-yul/GoodDock/releases/latest">내려받기</a>
+    <a class="btn" href="https://github.com/Seo-yul/GoodDock/releases/latest">Download</a>
     <a class="btn ghost" href="https://github.com/Seo-yul/GoodDock">GitHub</a>
   </div>
-  <p class="req">무료 · macOS 13 이상</p>
+  <p class="req">Free · macOS 13 or later</p>
 </header>
 
 <main>
 
 <section class="wrap">
-  <h2>이런 적 있으신가요</h2>
-  <p>모니터를 여러 대 쓰다 보면 Dock이 한자리에 가만히 있지 않습니다. 아무 모니터에서나
-     포인터를 화면 아래로 꾹 밀면 Dock이 그쪽으로 따라와버립니다. 잠깐 마우스를 내렸을 뿐인데
-     Dock이 옆 모니터로 이사를 가 있고, 다시 데려오려면 또 하단을 눌러야 합니다.</p>
-  <p>Apple이 준 선택지는 둘뿐입니다. "디스플레이별 공간 사용"을 끄면 Dock은 고정되지만,
-     Space를 전환할 때 모든 모니터가 한꺼번에 넘어가는 더 큰 불편이 생깁니다. 켜두면
-     Space는 독립적이지만 Dock이 떠돌아다닙니다.</p>
-  <p><strong>GoodDock은 그 사이의 빈칸을 채웁니다.</strong> Space는 모니터별로 그대로 두고,
-     Dock만 지정한 화면에 붙잡아 둡니다.</p>
+  <h2>Sound familiar?</h2>
+  <p>With more than one display, the Dock never stays put. Push the pointer to the bottom
+     of any screen and the Dock follows it there. You lower the mouse for a second, and the
+     Dock has moved to the next monitor. To bring it back, you push again.</p>
+  <p>macOS offers two settings, and neither solves it. Turn off "Displays have separate
+     Spaces" and the Dock stays put, but every monitor now switches Spaces together, which
+     is worse. Leave it on and Spaces stay independent while the Dock wanders.</p>
+  <p><strong>GoodDock fills the gap.</strong> Spaces keep working per display, and the Dock
+     stays where you put it.</p>
 </section>
 
 <section class="wrap">
-  <h2>기능</h2>
+  <h2>Features</h2>
   <div class="cards">
     <div class="card">
-      <h3>화면을 그림으로 선택</h3>
-      <p>실제 모니터 배치를 축소한 미니맵에서 클릭 한 번으로 고정할 화면을 고릅니다.</p>
+      <h3>Pick your display visually</h3>
+      <p>Click a scaled map of your actual monitor layout instead of guessing from names.</p>
     </div>
     <div class="card">
-      <h3>배치 변경 자동 인식</h3>
-      <p>모니터를 새로 연결하거나 위치를 바꿔도 알아서 다시 인식합니다.</p>
+      <h3>Follows your setup</h3>
+      <p>Detects monitors being connected, disconnected, or rearranged.</p>
     </div>
     <div class="card">
-      <h3>가볍게 상주</h3>
-      <p>메뉴 막대 아이콘 하나로 동작합니다. Dock 자리를 차지하지 않습니다.</p>
+      <h3>Stays out of the way</h3>
+      <p>One small menu bar icon. It takes no space in the Dock itself.</p>
     </div>
     <div class="card">
-      <h3>언제든 되돌리기</h3>
-      <p>"고정 안 함"을 고르거나 앱을 종료하면 즉시 원래 동작으로 돌아갑니다.</p>
+      <h3>Reversible anytime</h3>
+      <p>Choose "Don't pin" or quit the app, and the default behavior returns instantly.</p>
     </div>
     <div class="card">
-      <h3>로그인 시 자동 실행</h3>
-      <p>메뉴에서 켜두면 다음 로그인부터 알아서 대기합니다.</p>
+      <h3>Launch at login</h3>
+      <p>Turn it on once, and it is waiting after every restart.</p>
     </div>
     <div class="card">
-      <h3>네트워크 사용 없음</h3>
-      <p>어떤 데이터도 밖으로 보내지 않습니다. 저장하는 값은 선택한 화면 하나뿐입니다.</p>
+      <h3>No network access</h3>
+      <p>Nothing leaves your Mac. The only stored value is the display you picked.</p>
     </div>
   </div>
 </section>
 
 <section class="wrap">
-  <h2>어떻게 동작하나요</h2>
-  <p>macOS에는 Dock을 특정 화면에 고정하는 기능이 없습니다. 그래서 GoodDock은 Dock을 직접
-     옮기는 대신, <strong>Dock이 다른 모니터로 넘어가는 조건 자체를 없앱니다.</strong></p>
-  <p>Dock을 부르는 동작은 "화면 맨 아래에 닿은 포인터를 한 번 더 아래로 미는 것"입니다.
-     GoodDock은 고정하지 않은 모니터의 아래 가장자리에서 이 동작이 감지되면 포인터를 살짝
-     위로 되돌립니다. 포인터가 바닥에 붙어 있을 수 없으니 Dock이 불려 나올 일도 없습니다.</p>
-  <p>아래쪽에 다른 모니터가 이어져 있는 가장자리는 자동으로 제외하므로, 모니터 사이를 오가는
-     포인터 이동은 전혀 방해받지 않습니다.</p>
+  <h2>How it works</h2>
+  <p>macOS has no API to pin the Dock to a display. So instead of moving the Dock,
+     <strong>GoodDock removes the condition that makes it move.</strong></p>
+  <p>The Dock is summoned when a pointer already resting at the bottom edge of a screen is
+     pushed down once more. GoodDock watches for that push on displays you did not pin, and
+     nudges the pointer a few pixels back up. The pointer can never sit against the bottom
+     edge, so the Dock is never called.</p>
+  <p>Edges where another display continues below are excluded automatically, so moving the
+     pointer between monitors is never affected.</p>
 </section>
 
 <section class="wrap">
-  <h2>설치</h2>
+  <h2>Install</h2>
   <ol class="steps">
-    <li>위의 <a href="https://github.com/Seo-yul/GoodDock/releases/latest">내려받기</a>에서
-        DMG를 받아 엽니다.</li>
-    <li>GoodDock을 응용 프로그램 폴더로 끌어놓습니다.</li>
-    <li>처음 열 때는 <strong>앱을 우클릭한 뒤 "열기"</strong>를 선택하고, 한 번 더 "열기"를 누릅니다.</li>
-    <li>손쉬운 사용 권한을 허용합니다.
-        (시스템 설정 &gt; 개인정보 보호 및 보안 &gt; 손쉬운 사용)</li>
-    <li>메뉴 막대의 강아지를 눌러 Dock을 앉혀둘 모니터를 클릭합니다.</li>
+    <li>Download the DMG from
+        <a href="https://github.com/Seo-yul/GoodDock/releases/latest">Releases</a> and open it.</li>
+    <li>Drag GoodDock into your Applications folder.</li>
+    <li>The first time, <strong>right-click the app and choose "Open"</strong>, then confirm
+        with "Open" once more.</li>
+    <li>Allow Accessibility permission.
+        (System Settings &gt; Privacy &amp; Security &gt; Accessibility)</li>
+    <li>Click the dog in the menu bar and pick the display where the Dock should stay.</li>
   </ol>
-  <p style="margin-top:16px">3번 과정이 필요한 이유는 이 앱이 Apple 개발자 인증서로 서명되어
-     있지 않기 때문입니다. 그래도 열리지 않으면 터미널에서 아래를 실행하세요.</p>
+  <p style="margin-top:16px">Step 3 is needed because this app is not signed with an Apple
+     Developer certificate. If it still refuses to open, clear the quarantine attribute:</p>
   <pre><code>xattr -dr com.apple.quarantine /Applications/GoodDock.app</code></pre>
-  <p class="note"><strong>주의:</strong> "디스플레이별 공간 사용"(시스템 설정 &gt; 데스크탑 및 Dock
-     &gt; Mission Control)은 켜져 있어야 합니다. 이 설정을 끄면 Space가 전 모니터에서 묶여버리는데,
-     바로 그 불편을 피하려고 만든 앱입니다.</p>
+  <p class="note"><strong>Note:</strong> "Displays have separate Spaces" (System Settings &gt;
+     Desktop &amp; Dock &gt; Mission Control) must stay <strong>on</strong>. Turning it off ties
+     every monitor to the same Space, which is the very problem this app exists to avoid.</p>
 </section>
 
 <section class="wrap">
-  <h2>자주 묻는 질문</h2>
-  <p><strong>왜 손쉬운 사용 권한이 필요한가요?</strong><br>
-     마우스가 화면 아래 가장자리에 닿는 순간을 알아채려면 시스템의 마우스 이벤트를 지켜봐야
-     합니다. macOS는 이 권한을 손쉬운 사용으로 관리합니다. GoodDock은 커서 위치만 보고,
-     키 입력은 읽지 않습니다.</p>
-  <p><strong>느려지지 않나요?</strong><br>
-     마우스 이벤트 하나를 처리하는 데 약 11나노초가 걸립니다. 마우스를 아주 빠르게 움직여도
-     CPU 사용률은 0.001% 수준입니다.</p>
-  <p><strong>제거하려면요?</strong><br>
-     앱을 종료하고 휴지통에 넣으면 됩니다. 시스템 설정을 바꾸지 않으므로 Dock은 즉시 원래대로
-     돌아갑니다.</p>
+  <h2>Questions</h2>
+  <p><strong>Why does it need Accessibility permission?</strong><br>
+     To notice the moment your pointer reaches the bottom edge of a screen, the app has to
+     watch system mouse events, and macOS governs that through Accessibility. GoodDock reads
+     cursor position only. It never reads keystrokes.</p>
+  <p><strong>Will it slow my Mac down?</strong><br>
+     Handling one mouse event takes about 11 nanoseconds. Even moving the mouse frantically,
+     that works out to roughly 0.001% of one CPU core.</p>
+  <p><strong>How do I uninstall it?</strong><br>
+     Quit the app and move it to the Trash. It never changes your system settings, so the
+     Dock goes back to its usual behavior immediately.</p>
 </section>
 
 </main>
 
 <footer>
-  <p>GoodDock &copy; 2026 Seoyul Yoon · 무료로 쓰실 수 있지만 오픈소스는 아닙니다.<br>
-     수정과 재배포, 상업적 이용은 허용되지 않습니다.</p>
+  <p>GoodDock &copy; 2026 Seoyul Yoon · Free to use, but not open source.<br>
+     Modification, redistribution, and commercial use are not permitted.</p>
   <p><a href="https://github.com/Seo-yul/GoodDock">GitHub</a> ·
-     <a href="https://github.com/Seo-yul/GoodDock/issues">버그 제보</a></p>
+     <a href="https://github.com/Seo-yul/GoodDock/issues">Report a bug</a> ·
+     <a href="ko/">한국어</a></p>
 </footer>
+
+<script>
+  // 한국어 브라우저는 한 번만 자동 안내한다. 사용자가 언어를 고르면 그 선택을 따른다.
+  (function () {
+    try {
+      if (localStorage.getItem('gooddock-lang')) return;
+      if (!navigator.language || navigator.language.slice(0, 2) !== 'ko') return;
+      localStorage.setItem('gooddock-lang', 'ko');
+      location.replace('ko/');
+    } catch (e) { /* 저장소 접근이 막혀 있으면 영어 페이지를 그대로 보여준다 */ }
+  })();
+  document.querySelectorAll('.lang a, footer a[href="ko/"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('gooddock-lang', 'ko'); } catch (e) {}
+    });
+  });
+</script>
 
 </body>
 </html>
