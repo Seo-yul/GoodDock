@@ -9,7 +9,7 @@ macOS Dock을 원하는 모니터에 얌전히 앉혀두는 메뉴 막대 앱</p
 
 <p align="center">
   <a href="https://github.com/Seo-yul/GoodDock/releases/latest"><b>⬇︎ 내려받기</b></a> ·
-  <a href="https://seo-yul.github.io/GoodDock/">소개 페이지</a>
+  <a href="http://devops.ai.kr/GoodDock/">소개 페이지</a>
 </p>
 
 ---
