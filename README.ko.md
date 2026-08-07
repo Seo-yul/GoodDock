@@ -84,7 +84,7 @@ Dock이 말을 안 듣고 돌아다니길래 훈련을 시켰습니다. 이제 �
 
 버그 제보나 기능 제안은 [Issues](https://github.com/Seo-yul/GoodDock/issues)에 남겨주세요.
 
-만든 사람: [윤서율](https://www.linkedin.com/in/yoon-seoyul)
+[LinkedIn](https://www.linkedin.com/in/yoon-seoyul)으로 연락 주셔도 됩니다.
 
 ## 라이선스
 
