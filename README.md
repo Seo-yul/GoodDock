@@ -84,6 +84,8 @@ The Dock kept running off, so it got some training. Now it sits where it is told
 
 Bug reports and feature requests are welcome in [Issues](https://github.com/Seo-yul/GoodDock/issues).
 
+Made by [Yoon Seoyul](https://www.linkedin.com/in/yoon-seoyul).
+
 ## License
 
 Free to use, personally or at work, at no cost.
