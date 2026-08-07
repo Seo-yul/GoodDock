@@ -88,4 +88,4 @@ Bug reports and feature requests are welcome in [Issues](https://github.com/Seo-
 
 Free to use, personally or at work, at no cost.
 
-It is not open source, though. The copyright holder reserves all rights, and **modification, redistribution, and commercial exploitation are not permitted.** See [LICENSE](LICENSE) for the full terms.
+The copyright holder reserves all rights, and **modification, redistribution, and commercial exploitation are not permitted.** See [LICENSE](LICENSE) for the full terms.
