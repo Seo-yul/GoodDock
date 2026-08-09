@@ -94,6 +94,10 @@
 
   ol.steps { margin: 0; padding-left: 20px; }
   ol.steps li { margin-bottom: 10px; }
+  .shots { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; align-items: flex-start; }
+  .shots figure { margin: 0; flex: 1 1 240px; max-width: 340px; }
+  .shots img { width: 100%; border: 1px solid var(--line); border-radius: 10px; }
+  .shots figcaption { font-size: 13px; color: var(--fg-muted); margin-top: 6px; line-height: 1.5; }
 
   pre {
     background: var(--bg-soft);
@@ -207,13 +211,36 @@
     <li><a href="https://github.com/Seo-yul/GoodDock/releases/latest">Releases</a>에서
         DMG를 받아 엽니다.</li>
     <li>안내 화면의 화살표를 따라 GoodDock을 응용 프로그램 폴더로 끌어놓습니다.</li>
-    <li>처음 열 때는 <strong>앱을 우클릭한 뒤 "열기"</strong>를 선택하고, 한 번 더 "열기"를 누릅니다.</li>
-    <li>손쉬운 사용 권한을 허용합니다.
+    <li>처음 열면 "악성 코드가 없음을 확인할 수 없습니다"라는 경고가 뜹니다.
+        <strong>"완료"</strong>를 누릅니다. "휴지통으로 이동"을 누르면 앱이 지워지니 주의하세요.</li>
+    <li>왼쪽 위 Apple 메뉴 &gt; 시스템 설정 &gt; 개인정보 보호 및 보안으로 들어가 아래로 내리면
+        "Mac을 보호하기 위해 'GoodDock'을(를) 차단했습니다"라는 안내가 보입니다.
+        옆의 <strong>"그래도 열기"</strong>를 누르고, 확인 창에서 한 번 더 "그래도 열기"를 누릅니다.</li>
+    <li>손쉬운 사용 권한 요청이 뜨면 "시스템 설정 열기"를 눌러 GoodDock을 허용합니다.
         (시스템 설정 &gt; 개인정보 보호 및 보안 &gt; 손쉬운 사용)</li>
     <li>메뉴 막대의 강아지를 눌러 Dock을 앉혀둘 모니터를 클릭합니다.</li>
   </ol>
-  <p style="margin-top:16px">3번 과정이 필요한 이유는 이 앱이 Apple 개발자 인증서로 서명되어
-     있지 않기 때문입니다. 그래도 열리지 않으면 터미널에서 아래를 실행하세요.</p>
+  <div class="shots">
+    <figure>
+      <img src="../assets/guide-first-open.png" alt="처음 열 때 뜨는 경고 창. 완료 버튼을 누른다.">
+      <figcaption>1단계. 이 창에서는 "완료"를 누릅니다.</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/guide-blocked.png" alt="개인정보 보호 및 보안 설정의 차단 안내와 그래도 열기 버튼.">
+      <figcaption>2단계. 설정 맨 아래의 "그래도 열기"를 누릅니다.</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/guide-open-anyway.png" alt="확인 창. 그래도 열기 버튼을 누른다.">
+      <figcaption>이어지는 확인 창에서 한 번 더 "그래도 열기"를 누릅니다.</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/guide-accessibility.png" alt="손쉬운 사용 접근 권한 요청 창.">
+      <figcaption>3단계. "시스템 설정 열기"를 눌러 손쉬운 사용 권한을 허용합니다.</figcaption>
+    </figure>
+  </div>
+  <p style="margin-top:16px">이 과정이 필요한 이유는 앱이 Apple 개발자 인증서로 서명되어 있지
+     않기 때문입니다. macOS 14 이하에서는 앱을 우클릭한 뒤 "열기"를 선택하는 것으로 충분합니다.
+     그래도 열리지 않으면 터미널에서 아래를 실행하세요.</p>
   <pre><code>xattr -dr com.apple.quarantine /Applications/GoodDock.app</code></pre>
   <p class="note"><strong>주의:</strong> "디스플레이별 공간 사용"(시스템 설정 &gt; 데스크탑 및 Dock
      &gt; Mission Control)은 <strong>켜져</strong> 있어야 합니다. 이 설정을 끄면 모든 모니터가 같은

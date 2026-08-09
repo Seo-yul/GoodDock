@@ -46,7 +46,21 @@ macOS 13 이상이 필요합니다.
 
 [Releases](https://github.com/Seo-yul/GoodDock/releases/latest)에서 DMG를 받아 열면 설치 안내 화면이 뜹니다. 화살표를 따라 GoodDock을 응용 프로그램 폴더로 끌어놓으세요.
 
-이 앱은 Apple 개발자 인증서로 서명되어 있지 않아서 처음 열 때 Gatekeeper가 막습니다. **앱을 우클릭한 뒤 "열기"를 선택**하고 한 번 더 "열기"를 누르면 이후로는 그냥 실행됩니다. 그래도 열리지 않으면 격리 속성을 지우세요.
+### 처음 열 때: "악성 코드가 없음을 확인할 수 없습니다" 경고
+
+이 앱은 Apple 개발자 인증서로 서명되어 있지 않아서 처음 열 때 Gatekeeper가 막습니다. 아래 순서로 한 번만 허용하면 이후로는 그냥 실행됩니다.
+
+1. GoodDock을 처음 열면 경고 창이 뜹니다. **"완료"**를 누르세요. "휴지통으로 이동"을 누르면 앱이 지워지니 주의하세요.
+
+2. 왼쪽 위 Apple 메뉴 > 시스템 설정 > 개인정보 보호 및 보안으로 들어가 아래로 내리면 "Mac을 보호하기 위해 'GoodDock'을(를) 차단했습니다"라는 안내가 보입니다. 옆의 **"그래도 열기"**를 누르세요.
+
+   <img src="docs/assets/guide-blocked.png" width="560" alt="개인정보 보호 및 보안 설정의 차단 안내와 그래도 열기 버튼">
+
+3. 확인 창이 뜨면 한 번 더 **"그래도 열기"**를 누르세요.
+
+   <img src="docs/assets/guide-open-anyway.png" width="280" alt="확인 창의 그래도 열기 버튼">
+
+macOS 14 이하에서는 앱을 우클릭한 뒤 "열기"를 선택하는 것으로 충분합니다. 그래도 열리지 않으면 격리 속성을 지우세요.
 
 ```bash
 xattr -dr com.apple.quarantine /Applications/GoodDock.app
@@ -54,7 +68,9 @@ xattr -dr com.apple.quarantine /Applications/GoodDock.app
 
 ### 첫 실행
 
-첫 실행 시 손쉬운 사용(Accessibility) 권한을 요청합니다. 시스템 설정 > 개인정보 보호 및 보안 > 손쉬운 사용에서 허용해주세요. 허용하면 앱이 자동으로 감지해서 바로 동작합니다.
+첫 실행 시 손쉬운 사용(Accessibility) 권한을 요청합니다. "시스템 설정 열기"를 누른 뒤 목록에서 GoodDock을 켜주세요. (시스템 설정 > 개인정보 보호 및 보안 > 손쉬운 사용) 허용하면 앱이 자동으로 감지해서 바로 동작합니다.
+
+<img src="docs/assets/guide-accessibility.png" width="480" alt="손쉬운 사용 접근 권한 요청 창">
 
 그다음 메뉴 막대의 강아지를 눌러 Dock을 앉혀둘 모니터를 클릭하면 끝입니다. 메뉴 맨 위가 "작동 중"으로 보이면 정상입니다.
 

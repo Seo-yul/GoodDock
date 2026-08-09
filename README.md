@@ -46,7 +46,15 @@ Requires macOS 13 or later.
 
 Download the DMG from [Releases](https://github.com/Seo-yul/GoodDock/releases/latest) and open it. An installer window appears; follow the arrow and drag GoodDock into your Applications folder.
 
-This app is not signed with an Apple Developer certificate, so Gatekeeper blocks it the first time. **Right-click the app and choose "Open"**, then confirm with "Open" once more. After that it launches normally. If it still refuses to open, clear the quarantine attribute:
+### First launch: the "cannot verify" warning
+
+This app is not signed with an Apple Developer certificate, so Gatekeeper blocks it the first time. Allow it once and it launches normally afterwards.
+
+1. Open GoodDock. A warning says Apple could not verify the app is free of malware. Click **Done**. (Careful: "Move to Trash" deletes the app.)
+2. Open System Settings > Privacy & Security, scroll down to *"GoodDock" was blocked to protect your Mac*, and click **Open Anyway**.
+3. Confirm with **Open Anyway** once more in the dialog that follows.
+
+On macOS 14 and earlier, right-clicking the app and choosing "Open" is enough. If it still refuses to open, clear the quarantine attribute:
 
 ```bash
 xattr -dr com.apple.quarantine /Applications/GoodDock.app
@@ -54,7 +62,7 @@ xattr -dr com.apple.quarantine /Applications/GoodDock.app
 
 ### First run
 
-GoodDock asks for Accessibility permission on first launch. Allow it under System Settings > Privacy & Security > Accessibility. The app detects the change and starts working immediately.
+GoodDock asks for Accessibility permission on first launch. Click "Open System Settings" in the prompt and enable GoodDock in the list (System Settings > Privacy & Security > Accessibility). The app detects the change and starts working immediately.
 
 Then click the dog in the menu bar and pick the display where the Dock should stay. If the top of the menu reads "작동 중" (running), you are set.
 
