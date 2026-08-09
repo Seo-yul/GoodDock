@@ -36,7 +36,7 @@ Edges where another display continues below are excluded automatically, so movin
 - Lives in the menu bar as a small dog icon and takes no Dock space
 - Pick the pinned display by clicking a scaled map of your actual monitor layout
 - Detects monitors being connected, disconnected, or rearranged
-- Shows whether it is running, and how many Dock moves it has blocked
+- Shows at a glance whether it is running
 - Optional launch at login
 - Choose "Don't pin" at any time to restore the default behavior
 
@@ -44,7 +44,7 @@ Edges where another display continues below are excluded automatically, so movin
 
 Requires macOS 13 or later.
 
-Download the DMG from [Releases](https://github.com/Seo-yul/GoodDock/releases/latest), open it, and drag GoodDock into your Applications folder.
+Download the DMG from [Releases](https://github.com/Seo-yul/GoodDock/releases/latest) and open it. An installer window appears; follow the arrow and drag GoodDock into your Applications folder.
 
 This app is not signed with an Apple Developer certificate, so Gatekeeper blocks it the first time. **Right-click the app and choose "Open"**, then confirm with "Open" once more. After that it launches normally. If it still refuses to open, clear the quarantine attribute:
 
