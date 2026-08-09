@@ -40,6 +40,10 @@ Edges where another display continues below are excluded automatically, so movin
 - Optional launch at login
 - Choose "Don't pin" at any time to restore the default behavior
 
+<p align="center">
+  <img src="docs/assets/screenshot-menu.png" width="340" alt="The GoodDock menu, showing a scaled map of the actual monitor arrangement.">
+</p>
+
 ## Install
 
 Requires macOS 13 or later.

@@ -40,6 +40,10 @@ Dock을 부르는 동작은 화면 맨 아래에 닿아 있는 포인터를 한 
 - 로그인 시 자동 실행을 켜고 끌 수 있습니다
 - 언제든 "고정 안 함"을 고르면 원래 동작으로 돌아갑니다
 
+<p align="center">
+  <img src="docs/assets/screenshot-menu.png" width="340" alt="GoodDock 메뉴. 실제 모니터 배치를 축소한 지도에서 고정할 화면을 고른다.">
+</p>
+
 ## 설치
 
 macOS 13 이상이 필요합니다.
